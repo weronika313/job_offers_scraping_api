@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from backend.apps.scraping_pages.models import ScrapingAlgorithm
-from backend.apps.scraping_pages.models import ScrapingAlgorithmStatus
-from backend.apps.scraping_pages.models import Page
+from apps.scraping_pages.models import ScrapingAlgorithm
+from apps.scraping_pages.models import ScrapingAlgorithmStatus
+from apps.scraping_pages.models import Page
 
 
 class PageSerializer(serializers.ModelSerializer):
