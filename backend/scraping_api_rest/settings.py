@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     #apps
     'apps.users',
-    'apps.scraping'
+    'apps.scraping',
+    'apps.scraping_pages'
+
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -97,7 +99,10 @@ DATABASES = {
         'USER': 'user2',
         'PASSWORD': 'password',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': '5432',
+        'TEST': {
+            'NAME': 'mytestdatabase',
+        },
     }
 }
 
