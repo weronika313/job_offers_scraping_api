@@ -37,7 +37,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+    #apps
+    'apps.users',
+    'apps.scraping'
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,9 +93,9 @@ WSGI_APPLICATION = 'scraping_api_rest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_scrape_api',
-        'USER': 'user1',
-        'PASSWORD': 'pass1',
+        'NAME': 'scraping_api_db',
+        'USER': 'user2',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432'
     }
